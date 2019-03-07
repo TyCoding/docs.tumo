@@ -1,12 +1,3 @@
----
-title: （八）Spring Boot整合Redis
-date: 2019-02-26 19:27:45
-tags: spring-boot
-categories: spring-boot
-top: 61
----
-
-
 整理学习spring boot常见案例，
 
 仓库地址：[spring-boot-learn](https://github.com/TyCoding/spring-boot-learn)

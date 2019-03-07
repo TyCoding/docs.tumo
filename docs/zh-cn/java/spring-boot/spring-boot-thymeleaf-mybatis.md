@@ -1,11 +1,3 @@
----
-title: （五）SpringBoot整合Mybatis通用Mapper
-date: 2019-02-26 19:17:53
-tags: spring-boot
-categories: spring-boot
-top: 59
----
-
 整理学习spring boot常见案例，
 
 仓库地址：[spring-boot-learn](https://github.com/TyCoding/spring-boot-learn)

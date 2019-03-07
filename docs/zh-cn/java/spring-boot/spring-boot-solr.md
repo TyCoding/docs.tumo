@@ -1,12 +1,3 @@
----
-title: Spring-Boot-Solr 踩坑记！
-date: 2019-03-06 18:35:08
-tags: spring-boot
-categories: spring-boot
-top: 65
----
-
-
 整理学习spring boot常见案例，
 
 仓库地址：[spring-boot-learn](https://github.com/TyCoding/spring-boot-learn)

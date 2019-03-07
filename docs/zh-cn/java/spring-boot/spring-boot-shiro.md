@@ -1,11 +1,3 @@
----
-title: （六）Spring Boot整合Shiro
-date: 2019-02-26 19:22:56
-tags: spring-boot
-categories: spring-boot
-top: 60
----
-
 整理学习spring boot常见案例，
 
 仓库地址：[spring-boot-learn](https://github.com/TyCoding/spring-boot-learn)

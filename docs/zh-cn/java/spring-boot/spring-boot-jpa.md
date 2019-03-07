@@ -1,11 +1,3 @@
----
-title: （三）Spring Boot 整合 JPA
-date: 2019-02-26 19:09:48
-tags: spring-boot
-categories: spring-boot
-top: 57
----
-
 整理学习spring boot常见案例，
 
 仓库地址：[spring-boot-learn](https://github.com/TyCoding/spring-boot-learn)

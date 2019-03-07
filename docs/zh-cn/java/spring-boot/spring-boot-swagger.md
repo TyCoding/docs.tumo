@@ -1,11 +1,3 @@
----
-title: （十）Spring Boot2整合Swagger2.9.2
-date: 2019-02-27 21:06:56
-tags: spring-boot
-categories: spring-boot
-top: 63
----
-
 整理学习spring boot常见案例，
 
 仓库地址：[spring-boot-learn](https://github.com/TyCoding/spring-boot-learn)

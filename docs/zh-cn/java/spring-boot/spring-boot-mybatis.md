@@ -1,11 +1,3 @@
----
-title: （四）Spring Boot整合Mybatis
-date: 2019-02-26 19:13:36
-tags: spring-boot
-categories: spring-boot
-top: 58
----
-
 整理学习spring boot常见案例，
 
 仓库地址：[spring-boot-learn](https://github.com/TyCoding/spring-boot-learn)

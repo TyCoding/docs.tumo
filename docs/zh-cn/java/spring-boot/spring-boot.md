@@ -1,12 +1,3 @@
----
-title: （一）Spring-Boot入门之工程搭建
-comments: false
-date: 2018-09-28 13:46:33
-tags: springboot
-categories: springboot
-top: 55
----
-
 整理学习spring boot常见案例，
 
 仓库地址：[spring-boot-learn](https://github.com/TyCoding/spring-boot-learn)
