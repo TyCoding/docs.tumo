@@ -1,8 +1,8 @@
 ![logo](_media/icon.png)
 
-# tycoding Study Hub
+# TyCoding Study Hub
 
 > Learning is like a tycoding. It must be slow and purposeful :rocket:
 
-[GitHub](https://github.com/tycoding/stydy)
+[GitHub](https://github.com/tycoding/study)
 [Getting Started](#tycoding)
