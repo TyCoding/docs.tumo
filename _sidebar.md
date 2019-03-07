@@ -1,3 +1,15 @@
 - **Java相关**
   - **基础入门**
     - [起步](#)
+  - **Spring Boot 系列**
+    - [介绍](docs/zh-cn/java//spring-boot/README.md)
+    - [Spring Boot入门](docs/zh-cn/java/spring-boot/spring-boot.md)
+    - [Spring Boot整合Thymeleaf](docs/zh-cn/java/spring-boot/spring-boot-thymeleaf.md)
+    - [Spring Boot整合JPA](docs/zh-cn/java/spring-boot/spring-boot-jpa.md)
+    - [Spring Boot整合Mybatis](docs/zh-cn/java/spring-boot/spring-boot-mybatis.md)
+    - [Spring Boot整合Thymeleaf&Mybatis](docs/zh-cn/java/spring-boot/spring-boot-thymeleaf-mybatis.md)
+    - [Spring Boot整合Shiro](docs/zh-cn/java/spring-boot/spring-boot-shiro.md)
+    - [Spring Boot整合Redis](docs/zh-cn/java/spring-boot/spring-boot-redis.md)
+    - [Spring Boot邮件服务](docs/zh-cn/java/spring-boot/spring-boot-mail.md)
+    - [Spring Boot整合Swagger2](docs/zh-cn/java/spring-boot/spring-boot-swagger.md)
+    - [Spring Boot整合Solr](docs/zh-cn/java/spring-boot/spring-boot-solr.md)
