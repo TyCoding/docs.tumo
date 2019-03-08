@@ -517,3 +517,63 @@ private ResponseCode solrTemplateSearch(String keyword, Integer current, Integer
 ```
 
 `SolrTemplate`中提供了很多封装好的类进行调用，快速获取查询数据，相比`SolrQuery`逻辑和代码量都要简化很多。
+
+## 复杂查询
+
+有关Solr各种查询参数看文章：[Solr之精确、匹配、排序、模糊查询](https://blog.csdn.net/yelllowcong/article/details/78709435)
+
+那么当使用复杂查询时，比如要查询`username`**或者**`phone`字段中包含`79726426`的数据。
+
+也就是说这时要限定：**或** 条件，这在Solr中对应`OR`（必须是大写）。
+
+那么这样的查询用Java如何写呢？
+
+开始我尝试这样写：
+
+```java
+String keyword = "79726426";
+SolrQuery query = new SolrQuery();
+query.set("q", "username:" + keyword + " OR phone:" + keyword);
+```
+
+我以为`SolrQuery`会拼接为`/select?q=username:79726426 OR phone:79726426`。但结果却是报错，大概原因就是他无法识别`" OR "`这段字符串。但这段URL在浏览器上测试时正确(`http://localhost:8983/solr/new_core/select?q=username:79726426 OR phone:79726426`)的呀。后来我又改为：
+
+```java
+query.set("q", "username:" + keyword + " OR " +"phone:" + keyword);
+```
+
+但依然报错。其实原因大概就是因为SolrQuery在解析这段字符串的时候对那些空格也做了处理，而实际的URL solr就识别不了了。下面是一个正确的例子：
+
+```java
+SolrQuery query = new SolrQuery();
+query.setStart(pageCode);
+query.setRows(Integer.valueOf(searchMap.get("pageSize").toString()));
+query.set("wt", "json");
+query.set("shards", shards); //多core查询
+StringBuilder params = new StringBuilder();
+if (searchType.equals("1")) {
+    query.setParam("hl", "true");
+    query.setParam("hl.fl", lightNames);
+    query.setHighlightSimplePre("<em  style='color: red'>");
+    query.setHighlightSimplePost("</em>");
+    query.setHighlightFragsize(100000);
+    query.setQuery("*:*");
+    if (regexUtil.getChinaPattern(keyword)) {
+        params.append("username:*" + keyword + "*");
+    } else if (regexUtil.getEmailPattern(keyword)) {
+        params.append("email:*" + keyword + "*");
+    } else if (regexUtil.getChinaPattern(keyword) && regexUtil.getEmailPattern(keyword)) {
+        params.append("username:*" + keyword + "* OR email:*" + keyword + "*");
+    } else if (regexUtil.getPhonePattern(keyword)) {
+        params.append("phone:*" + keyword + "*");
+    } else if (regexUtil.getQqPattern(keyword)) {
+        params.append("username:*" + keyword + "* OR qq:*" + keyword + "*");
+    } else {
+        params.append("keyword:*" + keyword + "*");
+    }
+    query.setFilterQueries(params.toString());
+} else {
+    query.set("q", searchSort + ":" + keyword);
+}
+QueryResponse rsp = solrClient.query(query);//执行检索
+```
