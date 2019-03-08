@@ -298,26 +298,3 @@ public class UserMapperTest {
 如上，看到这里，感觉和JPA调用接口的方式很像吧，`tk.Mapper`能帮我们简化很多SQL的编写，但是复杂的SQL还是需要手动写，这点和JPA一样的。
 
 这里我也只是测试了几个常用的CRUD操作，`tk.Mapper`提供了很多方法，我们通过方法名就能大概猜到，所以这里不再做更多的测试。
-
-
-
-
-
-
-<br/>
-
-# 交流
-
-以上仅是个人的见解，可能有些地方是错误的，深知自己的菜鸡技术，欢迎大佬指出。
-
-个人建了一个Java交流群：671017003。 欢迎大佬或是新人入驻一起交流学习Java技术。
-
-<br/>
-
-# 联系
-
-If you have some questions after you see this article, you can contact me or you can find some info by clicking these links.
-
-- [Blog@TyCoding's blog](http://www.tycoding.cn)
-- [GitHub@TyCoding](https://github.com/TyCoding)
-- [ZhiHu@TyCoding](https://www.zhihu.com/people/tomo-83-82/activities)

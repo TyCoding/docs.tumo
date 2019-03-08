@@ -513,23 +513,3 @@ public interface UserDao extends JpaRepository<User, Long> {
 JPA官方规定数据表必须有主键（id），而之前权限管理项目中一些关联表（用户角色关联表）是不需要主键的，但如果使用JPA就必须配置主键，不管你用不用。
 
 [](https://en.wikibooks.org/wiki/Java_Persistence/Identity_and_Sequencing#No_Primary_Key)
-
-
-
-<br/>
-
-# 交流
-
-以上仅是个人的见解，可能有些地方是错误的，深知自己的菜鸡技术，欢迎大佬指出。
-
-个人建了一个Java交流群：671017003。 欢迎大佬或是新人入驻一起交流学习Java技术。
-
-<br/>
-
-# 联系
-
-If you have some questions after you see this article, you can contact me or you can find some info by clicking these links.
-
-- [Blog@TyCoding's blog](http://www.tycoding.cn)
-- [GitHub@TyCoding](https://github.com/TyCoding)
-- [ZhiHu@TyCoding](https://www.zhihu.com/people/tomo-83-82/activities)

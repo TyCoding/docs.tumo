@@ -368,23 +368,3 @@ public String login(String username, String password, Model model) {}
 更多的Shiro特性可以参看我的这个项目：[SSM权限管理示例](https://github.com/TyCoding/shiro)
 
 同时推荐大家阅读张开涛老师的：[跟我学Shiro](https://jinnianshilongnian.iteye.com/blog/2018398)
-
-
-
-<br/>
-
-# 交流
-
-以上仅是个人的见解，可能有些地方是错误的，深知自己的菜鸡技术，欢迎大佬指出。
-
-个人建了一个Java交流群：671017003。 欢迎大佬或是新人入驻一起交流学习Java技术。
-
-<br/>
-
-# 联系
-
-If you have some questions after you see this article, you can contact me or you can find some info by clicking these links.
-
-- [Blog@TyCoding's blog](http://www.tycoding.cn)
-- [GitHub@TyCoding](https://github.com/TyCoding)
-- [ZhiHu@TyCoding](https://www.zhihu.com/people/tomo-83-82/activities)
