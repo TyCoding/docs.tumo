@@ -1,31 +1,32 @@
-- **Java相关**
-  - **基础入门**
-    - [对象与类](docs/zh-cn/java/base/base01.md)
+- **使用文档**
+
+- **推荐阅读**
   - **Spring Boot 系列**
     - [介绍](docs/zh-cn/java/spring-boot/README.md)
-    - [Spring Boot入门](docs/zh-cn/java/spring-boot/spring-boot.md)
-    - [Spring Boot整合Thymeleaf](docs/zh-cn/java/spring-boot/spring-boot-thymeleaf.md)
-    - [Spring Boot整合JPA](docs/zh-cn/java/spring-boot/spring-boot-jpa.md)
-    - [Spring Boot整合Mybatis](docs/zh-cn/java/spring-boot/spring-boot-mybatis.md)
-    - [Spring Boot整合Thymeleaf&Mybatis](docs/zh-cn/java/spring-boot/spring-boot-thymeleaf-mybatis.md)
-    - [Spring Boot整合Shiro](docs/zh-cn/java/spring-boot/spring-boot-shiro.md)
-    - [Spring Boot整合Redis](docs/zh-cn/java/spring-boot/spring-boot-redis.md)
-    - [Spring Boot邮件服务](docs/zh-cn/java/spring-boot/spring-boot-mail.md)
-    - [Spring Boot整合Swagger2](docs/zh-cn/java/spring-boot/spring-boot-swagger.md)
-    - [Spring Boot整合Solr](docs/zh-cn/java/spring-boot/spring-boot-solr.md)
-- **前端相关**
+    - [Spring Boot入门](docs/boot/spring-boot.md)
+    - [Spring Boot整合Thymeleaf](docs/boot/spring-boot-thymeleaf.md)
+    - [Spring Boot整合JPA](docs/boot/spring-boot-jpa.md)
+    - [Spring Boot整合Mybatis](docs/boot/spring-boot-mybatis.md)
+    - [Spring Boot整合Thymeleaf&Mybatis](docs/boot/spring-boot-thymeleaf-mybatis.md)
+    - [Spring Boot整合Shiro](docs/boot/spring-boot-shiro.md)
+    - [Spring Boot整合Shiro+Vue.js](docs/boot/spring-boot-shiro-vue.md)
+    - [Spring Boot整合Redis](docs/boot/spring-boot-redis.md)
+    - [Spring Boot整合Swagger2](docs/boot/spring-boot-swagger.md)
+    - [Spring Boot整合Solr](docs/boot/spring-boot-solr.md)
+    - [Spring Boot整合Websocket](docs/boot/spring-boot-websocket.md)
+    - [Spring Boot整合MongoDB](docs/boot/spring-boot-mongo.md)
+    - [Spring Boot整合Mail](docs/boot/spring-boot-mail.md)
+    - [Spring Boot整合ElasticSearch](docs/boot/spring-boot-es.md)
+    - [Spring Boot整合Security](docs/boot/spring-boot-security.md)
+    - [Spring Boot整合Security图形校验码](docs/boot/spring-boot-security-validate.md)
+    - [Spring Boot整合Security-OAuth2](docs/boot/spring-boot-security-oauth2-start.md)
+    - [Spring Boot整合Security-OAuth2项目搭建](docs/boot/spring-boot-security-oauth2.md)
+    - [Spring Boot整合Security-OAuth2数据存储](docs/boot/spring-boot-security-oauth2-db.md)
   - **VueJS**
-    - [初始Vue Js](docs/zh-cn/web/vue/vue-start.md)
-    - [Vue-resource数据交互](docs/zh-cn/web/vue/vue-resource.md)
-    - [Vue路由](docs/zh-cn/web/vue/vue-router.md)
-    - [Vue组件](docs/zh-cn/web/vue/vue-component.md)
-    - [Vue前后端分离开发初体验](docs/zh-cn/web/vue/vue-develop.md)
-    - [Vue+ElementUI+SpringMVC分页查询](docs/zh-cn/web/vue/vue-pagehelper.md)
-    - [Vue+ElementUI+SpringMVC图片回显](docs/zh-cn/web/vue/vue-image.md)
-- **Linux相关**
-  - **环境安装**
-    - [CentOS-7.x系统安装](docs/zh-cn/linux/develop-environment/centos.md)
-    - [Docker环境安装](docs/zh-cn/linux/develop-environment/docker.md)
-    - [Nginx环境部署](docs/zh-cn/linux/develop-environment/nginx.md)
-    - [FastDFS分布式文件系统搭建](docs/zh-cn/linux/develop-environment/fastdfs.md)
-
+    - [初识Vue.js](docs/vue/vue-1.md)
+    - [Vue过滤器](docs/vue/vue-2.md)
+    - [Vue组件](docs/vue/vue-3.md)
+    - [Vue路由](docs/vue/vue-4.md)
+    - [Vue前后端分离开发初体验](docs/vue/vue-5.md)
+    - [Vue+ElementUI+SpringMVC分页查询](docs/vue/vue-6.md)
+    - [Vue+ElementUI+SpringMVC图片回显](docs/vue/vue-7.md)

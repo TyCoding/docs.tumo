@@ -1,8 +1,9 @@
 ![logo](_media/icon.png)
 
-# TyCoding Study Hub
+# Tumo Blog Develop Docs
 
-> Learning is like a tycoding. It must be slow and purposeful :rocket:
+> SpringBoot最佳实践，手摸手教你实战SpringBoot项目开发  :rocket:
 
-[GitHub](https://github.com/tycoding/study)
+[GitHub](https://github.com/tycoding/docs.tumo)
 [Getting Started](#tycoding)
+
