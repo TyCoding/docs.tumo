@@ -12,6 +12,10 @@
 
 [Tumo](https://github.com/TyCoding/tumo) 是一款基于SpringBoot2.x构建的博客系统。[Tumo](https://github.com/TyCoding/tumo) 系统具有简洁、规范的代码设计，借助Vue.js、Thymeleaf构建传统单体架构项目；与此同时，[Tumo-Vue](https://github.com/TyCoding/tumo-vue) 前后端分离架构的系统也应运而生。两款项目采用相同的后端逻辑实现，区别在于前者采用了单体架构，而后者使用Vue2.x实现前后端分离架构。两者的结合更好的帮助开发者熟悉SpringBoot框架快速开发并学习项目如何从单体架构过度到前后端分离架构。
 
+- 在线预览：[http://tumo.tycoding.cn/](http://tumo.tycoding.cn/)
+- 后台地址：[http://tumo.tycoding.cn/login](http://tumo.tycoding.cn/login)
+- 开发文档：[http://docs.tumo.tycoding.cn/#/](http://docs.tumo.tycoding.cn/#/)
+
 ## 项目源码
 
 - **Tumo Blog：[https://github.com/TyCoding/tumo](https://github.com/TyCoding/tumo)**
@@ -44,25 +48,33 @@
 
 ## 预览
 
-![image-20200628230504753](http://cdn.tycoding.cn/20200628230535.png)
+![截屏2020-06-30 上午10.15.37](http://cdn.tycoding.cn/20200630101539.png)
 
-![image-20200629182110060](http://cdn.tycoding.cn/20200629182122.png)
+![截屏2020-06-30 上午10.15.53](http://cdn.tycoding.cn/20200630101555.png)
 
-![image-20200629182143704](http://cdn.tycoding.cn/20200629182143.png)
+![截屏2020-06-30 上午10.16.22](http://cdn.tycoding.cn/20200630101625.png)
 
-![image-20200629182159651](http://cdn.tycoding.cn/20200629182159.png)
+![截屏2020-06-30 上午10.16.36](http://cdn.tycoding.cn/20200630101638.png)
 
-![image-20200628230619466](http://cdn.tycoding.cn/20200628230619.png)
+![截屏2020-06-30 上午10.16.53](http://cdn.tycoding.cn/20200630101655.png)
 
-![image-20200628230642638](http://cdn.tycoding.cn/20200628230642.png)
+![截屏2020-06-30 上午10.17.53](http://cdn.tycoding.cn/20200630101800.png)
 
-![image-20200628230706004](http://cdn.tycoding.cn/20200628230706.png)
+![截屏2020-06-30 上午10.18.11](http://cdn.tycoding.cn/20200630101813.png)
 
-![image-20200628230815819](http://cdn.tycoding.cn/20200628230815.png)
+![截屏2020-06-30 上午10.18.23](http://cdn.tycoding.cn/20200630101825.png)
 
-![image-20200628230833364](http://cdn.tycoding.cn/20200628230833.png)
+![截屏2020-06-30 上午10.18.38](http://cdn.tycoding.cn/20200630101840.png)
 
-![image-20200629184039368](http://cdn.tycoding.cn/20200629184039.png)
+![截屏2020-06-30 上午10.18.50](http://cdn.tycoding.cn/20200630101852.png)
+
+![截屏2020-06-30 上午10.19.31](http://cdn.tycoding.cn/20200630101934.png)
+
+![截屏2020-06-30 上午10.19.46](http://cdn.tycoding.cn/20200630101948.png)
+
+![截屏2020-06-30 上午10.19.58](http://cdn.tycoding.cn/20200630102000.png)
+
+![截屏2020-06-30 上午10.20.43](http://cdn.tycoding.cn/20200630102045.png)
 
 ## 交流
 
