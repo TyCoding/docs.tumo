@@ -66,7 +66,7 @@ spring:
 
 本地Redis启动后，可以下载可视化工具：`Redis Desktop Manager`工具查看本地Redis数据库信息：
 
-![](http://cdn.tycoding.cn/20200629091723.png)
+![](http://tycoding.cn/imgs/20200629091723.png)
 
 ## 测试
 
@@ -89,7 +89,7 @@ public class SpringBootRedisApplicationTests {
 
 启动上面测试方法，再次回到`Redis Desktop Manager`可视化工具查看，出现了一条新的记录：
 
-![](http://cdn.tycoding.cn/20200629091728.png)
+![](http://tycoding.cn/imgs/20200629091728.png)
 
 **注**
 
@@ -127,7 +127,7 @@ public class SpringBootRedisApplicationTests {
 }
 ```
 
-![](http://cdn.tycoding.cn/20200629091732.png)
+![](http://tycoding.cn/imgs/20200629091732.png)
 
 可以看到无论是使用`RedisTemplate<String, String>`还是`StringRedisTemplate`，新增的数据都没有乱码。
 
@@ -233,7 +233,7 @@ public interface RedisService {
 
 `redis memory`其实就是Redis `info`命令中的Redis内存占用信息，通过`redis-cli`工具查看：
 
-![](http://cdn.tycoding.cn/20200629091738.png)
+![](http://tycoding.cn/imgs/20200629091738.png)
 
 `info`命令能获取到指定数据库的完整信息（默认是`db0`），其中就有很多`memory`，这里我们直接获取`used_memory`:
 
@@ -361,7 +361,7 @@ public class RedisInfo {
 
 最终，在前端渲染出来的数据就是：
 
-![](http://cdn.tycoding.cn/20200629091745.png)
+![](http://tycoding.cn/imgs/20200629091745.png)
 
 
 ## getKeys
@@ -543,11 +543,11 @@ public class RedisServiceImplTest {
 
 # 截图
 
-![](http://cdn.tycoding.cn/20200629091752.gif)
+![](http://tycoding.cn/imgs/20200629091752.gif)
 
-![](http://cdn.tycoding.cn/20200629091803.png)
+![](http://tycoding.cn/imgs/20200629091803.png)
 
-![](http://cdn.tycoding.cn/20200629091807.png)
+![](http://tycoding.cn/imgs/20200629091807.png)
 
 
 

@@ -203,13 +203,13 @@ public class HelloController {
 
 访问`localhost:8080/hello`:
 
-![](http://cdn.tycoding.cn/20200629092110.png)
+![](http://tycoding.cn/imgs/20200629092110.png)
 
 不拦截，正常。
 
 访问：`localhost:8080/info/tycoding`:
 
-![](http://cdn.tycoding.cn/20200629092113.png)
+![](http://tycoding.cn/imgs/20200629092113.png)
 
 为授权，被拦截，正常。
 
@@ -217,21 +217,21 @@ public class HelloController {
 
 在Postman上测试`localhost:8080/oauth/token?username=user_1&password=123456&grant_type=password`接口：
 
-![](http://cdn.tycoding.cn/20200629092117.png)
+![](http://tycoding.cn/imgs/20200629092117.png)
 
 可以看到依然被拦截，这是因为Spring Security配置中默认食用Basic认证方式。我们直接将这个请求粘贴到浏览器上：
 
-![](http://cdn.tycoding.cn/20200629092121.png)
+![](http://tycoding.cn/imgs/20200629092121.png)
 
 要解决这个问题，Postman提供模拟Basic登陆的效果：
 
-![](http://cdn.tycoding.cn/20200629092124.png)
+![](http://tycoding.cn/imgs/20200629092124.png)
 
 ### 使用Token访问受保护的资源
 
 按照上述方式获取到了`access_token`值，在浏览器上直接访问`localhost:8080/info/tycoding?access_token=xxx`:
 
-![](http://cdn.tycoding.cn/20200629092129.png)
+![](http://tycoding.cn/imgs/20200629092129.png)
 
 看到，还是被拦截，按道理，既然第三方应用拿到了Token值，通过这个Token值应该可以获取到受保护的资源。
 
@@ -246,7 +246,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
 如果启用了`@EnableResourceServer`的配置，那么应该重写`configure(HttpSecurity http)`方法，和`@EnableWebSecurity`标记类的配置类似，我们这里要配置不需要拦截的请求。如果你仅仅是在`@EnableWebSecurity`配置类中配置了`/hello`请求不拦截，而你启用了`@EnableResourceServer`配置，但并没有配置`HttpSecurity`的过滤配置，那么默认OAuth还是拦截所有，直接访问`/hello`反而也被拦截到：
 
-![](http://cdn.tycoding.cn/20200629092133.png)
+![](http://tycoding.cn/imgs/20200629092133.png)
 
 所以，应该配置为：
 
@@ -274,11 +274,11 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
 重新运行项目，获取到Token值，直接去浏览器访问：`localhost:8080/info/tycoding?access_token=xx`:
 
-![](http://cdn.tycoding.cn/20200629092137.png)
+![](http://tycoding.cn/imgs/20200629092137.png)
 
 出现这个错误可能是你的Token值需要更新了。
 
-![](http://cdn.tycoding.cn/20200629092140.png)
+![](http://tycoding.cn/imgs/20200629092140.png)
 
 正常访问
 
@@ -288,11 +288,11 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
 如果错误或过期：
 
-![](http://cdn.tycoding.cn/20200629092143.png)
+![](http://tycoding.cn/imgs/20200629092143.png)
 
 如果正确为过期：
 
-![](http://cdn.tycoding.cn/20200629092147.png)
+![](http://tycoding.cn/imgs/20200629092147.png)
 
 显示该Token对应第三方应用和用户的数据。
 
@@ -387,7 +387,7 @@ public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws E
 
 如果是使用的Postman工具请求的URL，报这个错误，通常是因为配置的Spring Security拦截了这个请求，并启用了Basic的验证方式，我们直接将这个URL放在浏览器上访问，则会弹出Basic密码验证框：
 
-![](http://cdn.tycoding.cn/20200629092154.png)
+![](http://tycoding.cn/imgs/20200629092154.png)
 
 正确输入客户端(Client)的账户（clientId）、密码(secret)，即可访问。
 
@@ -395,7 +395,7 @@ public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws E
 
 要解决这个问题，就要考虑怎么能让Postman请求不经过Basic登录框这个验证方式，这就需要知道Basic的加密方式。其实Basic登录框最终是将输入的用户名和密码通过Base64加密，然后在前面加上`Basic base64`，然后去请求这个URL接口，所以我们需要在 [在线加密解密网站](http://tool.oschina.net/encrypt?type=3) 将Client用户名和密码按照：`name:password`格式加密，最终在Postman中设置请求头`Authorization: Basic xxx`，这个xxx是按照`name:password`格式加密的数据：
 
-![](http://cdn.tycoding.cn/20200629092157.png)
+![](http://tycoding.cn/imgs/20200629092157.png)
 
 ### Full authentication is required to access this resource
 

@@ -34,7 +34,7 @@ top: 69
 
 直接去 [官网](https://www.elastic.co/downloads/) 下载最新版的ElasticSearch安装包，这里使用最新版-6.6.2。解压后的文件如下：
 
-![](http://cdn.tycoding.cn/20200629090849.png)
+![](http://tycoding.cn/imgs/20200629090849.png)
 
 ## 启动
 
@@ -44,11 +44,11 @@ top: 69
 ./elasticsearch
 ```
 
-![](http://cdn.tycoding.cn/20200629090853.png)
+![](http://tycoding.cn/imgs/20200629090853.png)
 
 如上证明启动成功。在浏览器上访问：`127.0.0.1:9200`即会输出ElasticSearch的版本信息。
 
-![](http://cdn.tycoding.cn/20200629090857.png)
+![](http://tycoding.cn/imgs/20200629090857.png)
 
 ## 命令
 
@@ -60,7 +60,7 @@ top: 69
 http://127.0.0.1:9200/索引名
 ```
 
-![](http://cdn.tycoding.cn/20200629090902.png)
+![](http://tycoding.cn/imgs/20200629090902.png)
 
 > 新建文档
 
@@ -72,7 +72,7 @@ http://127.0.0.1:9200/索引名/文档名
 body: {}
 ```
 
-![](http://cdn.tycoding.cn/20200629090906.png)
+![](http://tycoding.cn/imgs/20200629090906.png)
 
 > 查询全部文档
 
@@ -82,7 +82,7 @@ body: {}
 http://127.0.0.1:9200/索引名/文档名/_search
 ```
 
-![](http://cdn.tycoding.cn/20200629090912.png)
+![](http://tycoding.cn/imgs/20200629090912.png)
 
 * `took：`本次操作花费的时间，单位为毫秒。
 * `timed_out：`请求是否超时_
@@ -102,11 +102,11 @@ http://127.0.0.1:9200/索引名/文档名/_search
 http://127.0.0.1:9200/索引名/文档名/ID
 ```
 
-![](http://cdn.tycoding.cn/20200629090916.png)
+![](http://tycoding.cn/imgs/20200629090916.png)
 
 **如果该ID指定的文档不存在，就以该ID创建新的文档**
 
-![](http://cdn.tycoding.cn/20200629090921.png)
+![](http://tycoding.cn/imgs/20200629090921.png)
 
 > 按ID查询
 
@@ -181,7 +181,7 @@ grunt server
 
 浏览器访问：`localhost:9100`
 
-![](http://cdn.tycoding.cn/20200629090927.png)
+![](http://tycoding.cn/imgs/20200629090927.png)
 
 ## 安装IK分词器
 
@@ -197,7 +197,7 @@ git clone https://github.com/medcl/elasticsearch-analysis-ik/releases
 
 > 解压文件，并将文件夹重命名为`ik`
 
-![](http://cdn.tycoding.cn/20200629090931.png)
+![](http://tycoding.cn/imgs/20200629090931.png)
 
 > 将`ik`文件夹放在`elasticsearch/plugins`目录下，重启elasticsearch
 
@@ -205,7 +205,7 @@ git clone https://github.com/medcl/elasticsearch-analysis-ik/releases
 
 但是在ElasticSearch6开始的版本中，分词查询要用GET、POST请求，但要把请求参数写在body中，且需要JSON格式。
 
-![](http://cdn.tycoding.cn/20200629090948.png)
+![](http://tycoding.cn/imgs/20200629090948.png)
 
 ### 扩展词典
 
@@ -282,7 +282,7 @@ public interface EsRepository extends ElasticsearchRepository<Article, String> {
 
 联想solr,redis,jpa,mongodb，基本都是依赖继承一个`XxxRepository`接口即可，并且对于IDEA，如果继承了`XxxRepository`接口，IDEA会自动提示自定义查询方法的构建：
 
-![](http://cdn.tycoding.cn/20200629091010.png)
+![](http://tycoding.cn/imgs/20200629091010.png)
 
 如上的`findByTitleOrContentLike`就是根据`Title`或者`Cotent`字段`Like`模糊查询。
 
@@ -371,7 +371,7 @@ public class EsServiceImplTest {
 
 > 解压文件，并在其根目录下创建`mysqletc`文件夹（名称随意）
 
-![](http://cdn.tycoding.cn/20200629091020.png)
+![](http://tycoding.cn/imgs/20200629091020.png)
 
 > 在`mysqletc`文件夹下创建`mysql.conf`（名称随意）
 
@@ -434,7 +434,7 @@ INSERT INTO `tb_article` VALUES (2, '测试啊', '测试啊');
 
 执行`logstash -f ../mysqletc/mysql.conf`：
 
-![](http://cdn.tycoding.cn/20200629091027.png)
+![](http://tycoding.cn/imgs/20200629091027.png)
 
 并且查询语句会每分钟执行一次。
 
@@ -509,11 +509,11 @@ docker restart vm_es
 
 执行这个重启命令，通过`docker ps`命令发现，ES服务启动一会就又关闭了，
 
-![](http://cdn.tycoding.cn/20200629091034.png)
+![](http://tycoding.cn/imgs/20200629091034.png)
 
 执行`docker logs vm_es`查看`vm_es`容器的日志：
 
-![](http://cdn.tycoding.cn/20200629091038.png)
+![](http://tycoding.cn/imgs/20200629091038.png)
 
 此时，心里真TM一万个草泥马在奔腾。只好`docker rm vm_es`删除镜像，重新创建。
 
@@ -593,9 +593,9 @@ http.cors.allow-origin: "*"
 
 > 重启ES容器
 
-![](http://cdn.tycoding.cn/20200629091046.png)
+![](http://tycoding.cn/imgs/20200629091046.png)
 
-![](http://cdn.tycoding.cn/20200629091051.png)
+![](http://tycoding.cn/imgs/20200629091051.png)
 
 
 # 连接远程ElasticSearch服务

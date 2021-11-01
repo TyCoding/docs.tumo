@@ -278,9 +278,9 @@ public class WebsocketServerEndpoint {
 
 ## 截图
 
-![](http://cdn.tycoding.cn/20200629093213.png)
+![](http://tycoding.cn/imgs/20200629093213.png)
 
-![](http://cdn.tycoding.cn/20200629093217.jpg)
+![](http://tycoding.cn/imgs/20200629093217.jpg)
 
 
 

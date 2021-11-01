@@ -73,6 +73,6 @@ git clone https://github.com/TyCoding/tumo.git
 - 博客前台：[http://localhost:8080/](localhost:8080/)
 - 博客后台：[http://localhost:8080/login](localhost:8080/login)
 
-![截屏2020-06-29 下午7.02.00](http://cdn.tycoding.cn/20200629190203.png)
+![截屏2020-06-29 下午7.02.00](http://tycoding.cn/imgs/20200629190203.png)
 
 到此为止，[Tumo](https://github.com/TyCoding/tumo) 单体架构项目已经启动完成。

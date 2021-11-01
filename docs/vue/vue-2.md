@@ -421,7 +421,7 @@ var vm = new Vue({
 </body>
 </html>
 ```
-![](http://cdn.tycoding.cn/20200629094617.png)
+![](http://tycoding.cn/imgs/20200629094617.png)
 
 
 # Vue实例的生命周期
@@ -447,28 +447,28 @@ var vm = new Vue({
 ## beforeCreate
 此函数执行的时候，`data`和`methods`中的数据还没有初始化。
 
-![](http://cdn.tycoding.cn/20200629094622.png)
-![](http://cdn.tycoding.cn/20200629094628.png)
+![](http://tycoding.cn/imgs/20200629094622.png)
+![](http://tycoding.cn/imgs/20200629094628.png)
 
 ## created
 此函数中，data和methods都已经初始化好了，如果需要调用`methods`中的方法或操作`data`中的值最早就在`created`函数中操作。
 
-![](http://cdn.tycoding.cn/20200629094631.png)
-![](http://cdn.tycoding.cn/20200629094636.png)
+![](http://tycoding.cn/imgs/20200629094631.png)
+![](http://tycoding.cn/imgs/20200629094636.png)
 
 ## beforeMount
 此函数执行的时候，模板已经在内存中编译好了，但是尚未挂载到页面中去。
 
-![](http://cdn.tycoding.cn/20200629094642.png)
-![](http://cdn.tycoding.cn/20200629094645.png)
+![](http://tycoding.cn/imgs/20200629094642.png)
+![](http://tycoding.cn/imgs/20200629094645.png)
 
 ## mounted
 只要执行完了`mounted`，表示整个Vue实例已经初始化完毕了，此时组件已经进入了运行阶段。
 
-![](http://cdn.tycoding.cn/20200629094649.png)
+![](http://tycoding.cn/imgs/20200629094649.png)
 
 ## 图示
-![](http://cdn.tycoding.cn/20200629094653.png)
+![](http://tycoding.cn/imgs/20200629094653.png)
 
 
 # vue-resource实现请求提交

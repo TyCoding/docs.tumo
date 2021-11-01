@@ -329,7 +329,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
 * 注入`RedisConnectionFactory`用户OAuth2将Token数据储存到Redis数据库中，我们并不需要配置具体的实现，Security-OAuth2本身提供了很多种方式储存Token数据
 
-![](http://cdn.tycoding.cn/20200629091849.png)
+![](http://tycoding.cn/imgs/20200629091849.png)
 
 * 注入`UserDetailsService`，他用于初始化用户数据，我们仅仅在这里注入了`UserDetailsService`接口，而需要在其他地方注入实现了`UserDetailsService`接口的实现类。这样Security OAuth2会自动使用这个实现类中的配置。
 * 在`configure(AuthorizationServerEndpointsConfigurer endpoints)`中配置`UserDetailsService`，配置`tokenStore()`，使用Security OAuth的`RedisTokenStore`实现，将`RedisConnectionFactory`连接工厂注入即可。
@@ -409,7 +409,7 @@ public interface UserDetailsService {
 
 可以看到这个接口直接一个方法，这个方法用于根据用户名加载用户数据，最后需要返回一个`UserDetails`对象，可以看到`UserDetailsService`接口默认的实现：
 
-![](http://cdn.tycoding.cn/20200629091857.png)
+![](http://tycoding.cn/imgs/20200629091857.png)
 
 如上，可以通过`InMemoryUserDetailsManager`从内存中获取数据、通过`JdbcUserDetailsManager`通过封装的JDBC操作从数据库中获取数据…。
 
@@ -494,47 +494,47 @@ public abstract class AuthorityUtils {
 
 打开本地Redis
 
-![](http://cdn.tycoding.cn/20200629091903.png)
+![](http://tycoding.cn/imgs/20200629091903.png)
 
 启动项目，观察断点:
 
 首先，观察启动项目时`configure(AuthorizationServerEndpointsConfigurer endpoints)`方法：
 
-![](http://cdn.tycoding.cn/20200629091909.png)
+![](http://tycoding.cn/imgs/20200629091909.png)
 
 此时，我们`@Autowire`的`UserDetailsService`对象已经包含了我们设置的一写逻辑 ==> 通过Mybatis调用`findByUsername`方法查询数据库得到用户对象。
 
 访问：`localhost:8080/hello`:
 
-![](http://cdn.tycoding.cn/20200629091914.png)
+![](http://tycoding.cn/imgs/20200629091914.png)
 
 访问：`localhost:8080/info/tycoding`:
 
-![](http://cdn.tycoding.cn/20200629091919.png)
+![](http://tycoding.cn/imgs/20200629091919.png)
 
 使用Postman工具访问`localhost:8080/oauth/token`接口获取Token：
 
-![](http://cdn.tycoding.cn/20200629091922.png)
+![](http://tycoding.cn/imgs/20200629091922.png)
 
 注意Basic认证：
 
-![](http://cdn.tycoding.cn/20200629091926.png)
+![](http://tycoding.cn/imgs/20200629091926.png)
 
 查看断点，经过自定义实现了`UserDetailsService`接口的实现类：
 
-![](http://cdn.tycoding.cn/20200629091930.png)
+![](http://tycoding.cn/imgs/20200629091930.png)
 
 这里根据`findByUsername`查询到了用户数据，最终将数据封装到`AuthUser`对象中再返回即可：
 
-![](http://cdn.tycoding.cn/20200629091937.png)
+![](http://tycoding.cn/imgs/20200629091937.png)
 
 再次访问：`localhost:8080/info/tycoding?access_token=xxx`:
 
-![](http://cdn.tycoding.cn/20200629091942.png)
+![](http://tycoding.cn/imgs/20200629091942.png)
 
 查看Redis，可以看到认证数据已经储存在Redis中：
 
-![](http://cdn.tycoding.cn/20200629091946.png)
+![](http://tycoding.cn/imgs/20200629091946.png)
 
 
 

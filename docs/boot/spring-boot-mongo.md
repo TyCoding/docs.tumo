@@ -63,7 +63,7 @@ MongoDB是一个跨平台的面向文档的数据库，他介于关系型数据�
 | `db.mydb.findOne({_id: "1"})` | 仅查询符合条件的一条记录 |
 | `db.mydb.find().limit(1)` | 限制查询数量 |
 
-![](http://cdn.tycoding.cn/20200629091646.png)
+![](http://tycoding.cn/imgs/20200629091646.png)
 
 注意，如果使用`db.数据库名.insert`就会以该数据库名，创建一个同名的集合，将数据放到该集合下。
 

@@ -85,11 +85,11 @@ public class RouterController {
 </html>
 ```
 
-![](http://cdn.tycoding.cn/20200629093002.png)
+![](http://tycoding.cn/imgs/20200629093002.png)
 
 > 执行`main/java/ThymeleafApplication.java`启动类，用浏览器访问`localhost:8080/index`
 
-![](http://cdn.tycoding.cn/20200629093006.png)
+![](http://tycoding.cn/imgs/20200629093006.png)
 
 
 # 常用表达式
@@ -133,7 +133,7 @@ public class RouterController {
 </html>
 ```
 
-![](http://cdn.tycoding.cn/20200629093012.png)
+![](http://tycoding.cn/imgs/20200629093012.png)
 
 ## 选择*号表达式
 
@@ -277,7 +277,7 @@ HTML页面获取`user`对象中的元素：
 
 ## 常用的th标签
 
-![](http://cdn.tycoding.cn/20200629093020.png)
+![](http://tycoding.cn/imgs/20200629093020.png)
 
 # 案例
 
@@ -434,7 +434,7 @@ ${#strings.randomAlphanumeric(count)}
 
 因此，我们划分了以下几个部分：
 
-![](http://cdn.tycoding.cn/20200629093029.png)
+![](http://tycoding.cn/imgs/20200629093029.png)
 
 其中`common-css.html`和`common-js.html`分别存放页面公共的css/js引入标签。
 
@@ -442,7 +442,7 @@ ${#strings.randomAlphanumeric(count)}
 
 上面说到将页面划分了几部分，其实换分的几部分仅仅是将不同的`<div>`标签存放在不同的html中，如下：
 
-![](http://cdn.tycoding.cn/20200629093033.png)
+![](http://tycoding.cn/imgs/20200629093033.png)
 
 所以，看`header.html`代码：
 
@@ -499,13 +499,13 @@ ${#strings.randomAlphanumeric(count)}
 
 那么，这就是一个基础布局，通过在主页面（main.html）中引入其他子页面（header,side,css）：
 
-![](http://cdn.tycoding.cn/20200629093039.png)
+![](http://tycoding.cn/imgs/20200629093039.png)
 
 ## 使用iframe布局
 
 在以往的开发中，我们很经常遇到这样的问题（需求）：
 
-![](http://cdn.tycoding.cn/20200629093043.png)
+![](http://tycoding.cn/imgs/20200629093043.png)
 
 这里就用到了`<frameset>`、`<iframe>`了，他就是实现将B页面嵌套到A页面的指定区域内。
 
@@ -584,7 +584,7 @@ public String main() {
 }
 ```
 
-![](http://cdn.tycoding.cn/20200629093050.png)
+![](http://tycoding.cn/imgs/20200629093050.png)
 
 
 如果想要点击左侧菜单，在`content`区域显示菜单对应页面内容，还需要修改`side.html`：

@@ -452,13 +452,13 @@ public class MyInterceptor {
 
 # Preview
 
-![](http://cdn.tycoding.cn/20200629093248.png)
+![](http://tycoding.cn/imgs/20200629093248.png)
 
-![](http://cdn.tycoding.cn/20200629093300.png)
+![](http://tycoding.cn/imgs/20200629093300.png)
 
-![](http://cdn.tycoding.cn/20200629093305.png)
+![](http://tycoding.cn/imgs/20200629093305.png)
 
-![](http://cdn.tycoding.cn/20200629093310.png)
+![](http://tycoding.cn/imgs/20200629093310.png)
 
 
 

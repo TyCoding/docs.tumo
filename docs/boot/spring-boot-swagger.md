@@ -141,7 +141,7 @@ public class PathSelectors {
 
 如果你还有疑惑，可以先看一下项目整体结构：
 
-![](http://cdn.tycoding.cn/20200629092920.png)
+![](http://tycoding.cn/imgs/20200629092920.png)
 
 
 # 详解
@@ -263,7 +263,7 @@ public class ArticleController {
 
 启动项目，访问`localhost:8080/swagger-ui.html`：
 
-![](http://cdn.tycoding.cn/20200629092927.png)
+![](http://tycoding.cn/imgs/20200629092927.png)
 
 是不是很神奇呢，这么炫酷漂亮的界面Swagger已经帮我们写好了，根据刚才配置的`.apis(RequestHandlerSelectors.basePackage("cn.tycoding.controller"))`Swagger扫描到了`ArticleController`这个控制器类，根据刚才配置的`.paths(PathSelectors.regex("/.*"))`Swagger扫描了这个控制器的所有请求映射路径，并且生成API文档。
 
@@ -271,7 +271,7 @@ public class ArticleController {
 
 任意点开一个接口，点击左侧的Try it out，可以直接测试这个接口，就像Postman工具一样，并且旗下有丰富的接口文档信息
 
-![](http://cdn.tycoding.cn/20200629092931.png)
+![](http://tycoding.cn/imgs/20200629092931.png)
 
 可以看到我们模拟的接口请求成功，并且返回了响应数据。
 
@@ -349,7 +349,7 @@ public class Article implements Serializable {
 
 > 查看配置效果
 
-![](http://cdn.tycoding.cn/20200629092936.png)
+![](http://tycoding.cn/imgs/20200629092936.png)
 
 如上图所示，我在图中标记了Swagger注解对应的配置效果
 

@@ -23,7 +23,7 @@ Shiro提供*会话*管理实现用户于应用之间保持连接关系，在多�
 
 首先我简易的画一张登录校验的流程图：
 
-![](http://cdn.tycoding.cn/20200629093336.png)
+![](http://tycoding.cn/imgs/20200629093336.png)
 
 <!--more-->
 
@@ -129,7 +129,7 @@ public class ShiroConfig {
 
 按照上面的方式，我们还需要定义`EhCache`缓存的配置文件：`shiro-ehcache.xml`
 
-![](http://cdn.tycoding.cn/20200629093343.png)
+![](http://tycoding.cn/imgs/20200629093343.png)
 
 ```xml
 <ehcache>
@@ -188,23 +188,23 @@ public ResponseCode logout() {
 
 **login**
 
-![](http://cdn.tycoding.cn/20200629093348.png)
+![](http://tycoding.cn/imgs/20200629093348.png)
 
 响应数据：
 
-![](http://cdn.tycoding.cn/20200629093355.png)
+![](http://tycoding.cn/imgs/20200629093355.png)
 
 <br/>
 
 **登录后的ajax请求**
 
-![](http://cdn.tycoding.cn/20200629093400.png)
+![](http://tycoding.cn/imgs/20200629093400.png)
 
 你会发现上面的请求竟然是`302`重定向了，也就是说这个请求被Shiro拦截了，而我们在上上图中已经登过了啊，为什么还会被Shiro拦截呢？(记得之前配置了自定义拦截器链`/** = user`)。
 
 紧接着你会发现浏览器会跳转到另一个请求地址：
 
-![](http://cdn.tycoding.cn/20200629093403.png)
+![](http://tycoding.cn/imgs/20200629093403.png)
 
 ### 思考
 
@@ -241,7 +241,7 @@ service.interceptors.request.use(
 
 利用`Vuex`技术，会将用户已登录的Token信息写入全局store中，这样前端每次的`axios`请求的`Request Headers`中都将包含`X-Token`这个属性，其值是后端返回的sessionId。
 
-![](http://cdn.tycoding.cn/20200629093408.png)
+![](http://tycoding.cn/imgs/20200629093408.png)
 
 那么后端应该如何接收呢？
 
@@ -300,9 +300,9 @@ public class MySessionManager extends DefaultWebSessionManager {
 
 这样，再次请求接口：
 
-![](http://cdn.tycoding.cn/20200629093414.png)
+![](http://tycoding.cn/imgs/20200629093414.png)
 
-![](http://cdn.tycoding.cn/20200629093421.png)
+![](http://tycoding.cn/imgs/20200629093421.png)
 
 就解决了Shiro重定向的问题了。
 
@@ -381,7 +381,7 @@ redis:
 
 先启动本地Redis服务，再启动项目，登录系统，发现Redis数据库中就缓存了登录的`session`数据：
 
-![](http://cdn.tycoding.cn/20200629093426.png)
+![](http://tycoding.cn/imgs/20200629093426.png)
 
 
 <br/>

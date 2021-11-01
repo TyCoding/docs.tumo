@@ -34,15 +34,15 @@ So，SpringBoot将这一切都解决了。SpringBoot提供了一种固定的、�
 
 > 1.选择Spring Initializr，并选择本地的JDK版本
 
-![](http://cdn.tycoding.cn/20200629090621.png)
+![](http://tycoding.cn/imgs/20200629090621.png)
 
 > 2.Next，指定Group和Artifact名称，并选择本机JDK版本
 
-![](http://cdn.tycoding.cn/20200629090721.png)
+![](http://tycoding.cn/imgs/20200629090721.png)
 
 > 3.选择项目所需依赖
 
-![](http://cdn.tycoding.cn/20200629090731.png)
+![](http://tycoding.cn/imgs/20200629090731.png)
 
 **解释**
 
@@ -58,7 +58,7 @@ So，SpringBoot将这一切都解决了。SpringBoot提供了一种固定的、�
 
 # SpringBoot起步
 
-![](http://cdn.tycoding.cn/20200629090737.png)
+![](http://tycoding.cn/imgs/20200629090737.png)
 
 以上是新创建的Spring Boot项目。在SpringBoot中有一个启动器（引导类）的概念，我们首先看一下`SpringbootApplication.java`:
 
@@ -86,11 +86,11 @@ So,
 Run SpringBootApplication
 ```
 
-![](http://cdn.tycoding.cn/20200629090743.png)
+![](http://tycoding.cn/imgs/20200629090743.png)
 
 发现报错，说`DataSource`数据源的url地址没有配置。之前我们提到了SpringBoot的特性就是自动化配置，它会根据你的依赖文件来配置项目，我们再看一下我们的`pom.xml`：
 
-![](http://cdn.tycoding.cn/20200629090750.png)
+![](http://tycoding.cn/imgs/20200629090750.png)
 
 其中最上层的`<parent>`节点约束了整个下面所有spring-boot依赖的版本，即这里使用了SpringBoot-2.0.5。然后关注`<dependencies>`节点下的前四个依赖：
 
@@ -131,7 +131,7 @@ Run SpringBootApplication
 
 因为我们配置配置JDBC连接的数据库，所以报错，注释掉`spring-boot-starter-jdbc`和`mybatis-spring-boot-starter`依赖，再次启动`SpringBootApplication`:
 
-![](http://cdn.tycoding.cn/20200629090756.png)
+![](http://tycoding.cn/imgs/20200629090756.png)
 
 启动成功。
 

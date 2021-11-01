@@ -23,7 +23,7 @@ top: 65
 
 **欢迎star, fork**
 
-![](http://cdn.tycoding.cn/20200629092647.png)
+![](http://tycoding.cn/imgs/20200629092647.png)
 
 <!--more-->
 
@@ -37,7 +37,7 @@ top: 65
 
 如果安装完成，启动Solr服务器，浏览器访问Solr-Admin主页，先吧数据库中的数据导入到Solr中，上面链接的文档中已经介绍了。如果你查询到了这些数据，证明Solr安装成功：
 
-![](http://cdn.tycoding.cn/20200629092652.png)
+![](http://tycoding.cn/imgs/20200629092652.png)
 
 ## 配置
 
@@ -193,7 +193,7 @@ Map<String, Map<String, List<String>>> highlighting = response.getHighlighting()
 
 `highlighting`数据结构：
 
-![](http://cdn.tycoding.cn/20200629092709.png)
+![](http://tycoding.cn/imgs/20200629092709.png)
 
 > 3.根据限定的高亮字段匹配高亮集合中对应标记高亮的数据。
 
@@ -214,13 +214,13 @@ if (numFound != 0) {
 
 首先，我们看一下查询原始数据结构`documents`:
 
-![](http://cdn.tycoding.cn/20200629092712.png)
+![](http://tycoding.cn/imgs/20200629092712.png)
 
 可以看到这些数据是原始数据，并未高亮。而`document.getFieldValue("id")`就是获取到id值。
 
 而`highlighting.get(document.getFieldValue("id").toString())`就是根据id从高亮集合中获取对应的高亮字段和值，也就是：
 
-![](http://cdn.tycoding.cn/20200629092717.png)
+![](http://tycoding.cn/imgs/20200629092717.png)
 
 > 4.遍历response中返回的总数据集合，将高亮集合中的标记的高亮数据**替换**掉原未高亮的数据
 
@@ -272,11 +272,11 @@ if (numFound != 0) {
 
 通过`document.setField()`根据key,value将高亮的数据替换点原始未高亮的数据，实现的效果就是：
 
-![](http://cdn.tycoding.cn/20200629092723.png)
+![](http://tycoding.cn/imgs/20200629092723.png)
 
 通过不断的循环替换，就能将原始未高亮的数据替换为高亮的数据，那么最终在前端页面实现的效果是：
 
-![](http://cdn.tycoding.cn/20200629092727.png)
+![](http://tycoding.cn/imgs/20200629092727.png)
 
 ### 结
 
@@ -368,7 +368,7 @@ private ResponseCode solrQuerySearch(String keyword, Integer current, Integer ro
 
 最终渲染效果如图：
 
-![](http://cdn.tycoding.cn/20200629092735.png)
+![](http://tycoding.cn/imgs/20200629092735.png)
 
 看到，实际高亮的是`tycoding@163.com`整个数据，并不是仅高亮`163`这三个字符串。
 
@@ -386,7 +386,7 @@ private ResponseCode solrQuerySearch(String keyword, Integer current, Integer ro
 query.set("q", "keyword:" + keyword)
 ```
 
-![](http://cdn.tycoding.cn/20200629092740.png)
+![](http://tycoding.cn/imgs/20200629092740.png)
 
 看到高亮集合中虽然有key，但是没有value。那么最终也就没法实现高亮
 
@@ -401,15 +401,15 @@ query.set("q", "keyword:" + keyword)
 
 即让`username`和`email`域使用`text_ik`IK分词器，那么实际的效果：
 
-![](http://cdn.tycoding.cn/20200629092746.png)
+![](http://tycoding.cn/imgs/20200629092746.png)
 
 并且，仅对查询的数据`163`进行了高亮显示
 
-![](http://cdn.tycoding.cn/20200629092751.png)
+![](http://tycoding.cn/imgs/20200629092751.png)
 
 #### `q=*xx* and type='text_ik'`
 
-![](http://cdn.tycoding.cn/20200629092755.png)
+![](http://tycoding.cn/imgs/20200629092755.png)
 
 可以看到，数据被高亮显示了，但是还是整个字段值全被标记高亮。
 

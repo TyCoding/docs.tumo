@@ -22,7 +22,7 @@ top: 30
 
 **首先** 让我们看一下最终效果：
 
-![](http://cdn.tycoding.cn/20200629095022.png)
+![](http://tycoding.cn/imgs/20200629095022.png)
 
 # 起步
 本博文的主要讲一下Vue+ElementUI结合后端SpringMVC实现分页的实现思路，基本的elementUI用法请自行百度；
@@ -75,7 +75,7 @@ Vue的常用语法可以看我的 [博文](http://tycoding.cn/2018/07/25/vue-4/#
 ```
 这里还要注意的是PageHelper5.X版本和PageHelper4.X版本PageHelper类所在的包名是不同的。
 在Spring配置文件中扫描此配置文件即可：
-![](http://cdn.tycoding.cn/20200629095029.png)
+![](http://tycoding.cn/imgs/20200629095029.png)
 
 3、在HTML中导入`vue.js` and `element-ui` 。
 
@@ -276,7 +276,7 @@ public class PageBean() implements Serialization {
 
 因为我们使用了mybatis的分页插件：`PageHelper`，所以`PageHelper`最终为我们封装在`PageBean`的数据应该是这个样子的：
 
-![](http://cdn.tycoding.cn/20200629095042.png)
+![](http://tycoding.cn/imgs/20200629095042.png)
 
 **注意：**需要返回JSON格式数据。可以看到里面主要包含两个参数：`total`、`rows`
 

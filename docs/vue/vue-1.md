@@ -22,7 +22,7 @@ date: 2018-07-21 20:58:12
 	3. VM: 数据（Model）和视图（View）之间的调度者
 
 **图解**
-![](http://cdn.tycoding.cn/20200629094442.png)
+![](http://tycoding.cn/imgs/20200629094442.png)
 
 
 # 入门案例
@@ -85,13 +85,13 @@ date: 2018-07-21 20:58:12
 `v-text`默认会覆盖掉元素中原有的内容
 `v-cloak`不会覆盖掉原有的内容
 
-![](http://cdn.tycoding.cn/20200629094450.png)
+![](http://tycoding.cn/imgs/20200629094450.png)
 
 ## v-bind
 在上面，我们了解了`v-text`输出Vue元素，但是如果我们需要显示的数据是一段`HTML`代码，`v-text`和`{{val}}`都将无能为力，
 为此，Vue提供了专门渲染HTML数据的指令：`v-html`
 
-![](http://cdn.tycoding.cn/20200629094454.png)
+![](http://tycoding.cn/imgs/20200629094454.png)
 
 上面我们学习的指令都是Vue内置的指令，那么在Vue内置的指令中显示Vue绑定的变量，这当然没毛病；但是如果直接在HTML属性中使用Vue绑定的指令（不是用`{{val}}`）这样可以吗？
 ```html
@@ -124,7 +124,7 @@ date: 2018-07-21 20:58:12
     });
 </script>
 ```
-![](http://cdn.tycoding.cn/20200629094459.png)
+![](http://tycoding.cn/imgs/20200629094459.png)
 
 ## v-on
 Vue提供了事件绑定机制的指令：`v-on:`；用其我们可以用来绑定一些常见的触发事件：click、mouseover ...
@@ -207,7 +207,7 @@ Vue提供了事件绑定机制的指令：`v-on:`；用其我们可以用来绑�
 4、`setInterval()`和`clearInterval()`是js中内置的函数，用法如上。
 5、正常我们调用函数会写：`name(function(){})`，而ES6也提供了一个方式：`methodName(() => {})`，这种用法的好处就解决了`this`指向问题，因为如果元素定义在了函数内部，那么其中的`this`就表示当前函数的对象，如果我们需要使用外部的对象，除了在外部全局定义一个对象，一个简单的方式就是使用ES6提供的`=>`。
 
-![](http://cdn.tycoding.cn/20200629094507.png)
+![](http://tycoding.cn/imgs/20200629094507.png)
 
 ## 事件修饰符
 > .stop 阻止冒泡
@@ -273,7 +273,7 @@ Vue提供了事件绑定机制的指令：`v-on:`；用其我们可以用来绑�
 	});
 </script>
 ```
-![](http://cdn.tycoding.cn/20200629094513.png)
+![](http://tycoding.cn/imgs/20200629094513.png)
 
 ## vue中的样式
 
@@ -322,7 +322,7 @@ Vue提供了事件绑定机制的指令：`v-on:`；用其我们可以用来绑�
 	});
 </script>
 ```
-![](http://cdn.tycoding.cn/20200629094518.png)
+![](http://tycoding.cn/imgs/20200629094518.png)
 
 ### 内联样式
 
@@ -368,7 +368,7 @@ data: {
 	});
 </script>
 ```
-![](http://cdn.tycoding.cn/20200629094523.png)
+![](http://tycoding.cn/imgs/20200629094523.png)
 
 
 ## v-for
@@ -441,7 +441,7 @@ data: {
 	});
 </script>
 ```
-![](http://cdn.tycoding.cn/20200629094532.png)
+![](http://tycoding.cn/imgs/20200629094532.png)
 
 ### 注意
 在vue2.0+版本里，当使用`v-for`渲染数据，必须制定对应的`key`值（这里的key是一个属性，不是前面迭代的key值）。
@@ -490,9 +490,9 @@ Vue提供了两个指令来实现元素显示状态的切换：`v-if` `v-show`
     });
 </script>
 ```
-![](http://cdn.tycoding.cn/20200629094538.png)
+![](http://tycoding.cn/imgs/20200629094538.png)
 
-![](http://cdn.tycoding.cn/20200629094542.png)
+![](http://tycoding.cn/imgs/20200629094542.png)
 
 
 

@@ -238,7 +238,7 @@ protected abstract AuthenticationInfo doGetAuthenticationInfo(AuthenticationToke
 
 > 创建`index.html`和`login.html`两个页面：
 
-![](http://cdn.tycoding.cn/20200629092621.png)
+![](http://tycoding.cn/imgs/20200629092621.png)
 
 > 创建`LoginController.java`，编写路由导航地址
 
@@ -277,7 +277,7 @@ public class LoginController {
 
 启动项目，在浏览器上访问`localhost:8080`或者`localhost:8080/index`发现页面均会跳转到`/login`这个请求上：
 
-![](http://cdn.tycoding.cn/20200629092625.png)
+![](http://tycoding.cn/imgs/20200629092625.png)
 
 细心地你会发现请求地址中可能会拼接一个`JSESSIONID`，并且所有的的请求中均会携带一个`Cookie= JSESSIONID`。这其实是Shiro用于身份验证用的，Shiro默认生成一个会话ID，并储存在Cookie中，这样浏览器每次的请求头中都将携带这个Cookie数据，Shiro拦截请求，发现这个Cookie值是有效的会话(Session) ID，就判定这个请求是合法的请求，然后再根据自定义拦截器链决定是否对该请求放行。
 

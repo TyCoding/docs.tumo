@@ -25,7 +25,7 @@ top: 72
 
 我们可以以下图简单的了解下Oauth2
 
-![](http://cdn.tycoding.cn/20200629092039.png)
+![](http://tycoding.cn/imgs/20200629092039.png)
 
  这种方式就完全避免了把用户名密码暴露给第三方应用的风险。
 

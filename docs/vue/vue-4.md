@@ -31,8 +31,8 @@ top: 28
 
 **实例：**
 
-![](http://cdn.tycoding.cn/20200629094809.png)
-![](http://cdn.tycoding.cn/20200629094813.png)
+![](http://tycoding.cn/imgs/20200629094809.png)
+![](http://tycoding.cn/imgs/20200629094813.png)
 
 
 ### 基本使用
@@ -184,9 +184,9 @@ var routerObj = new VueRouter({
 
 实例：
 
-![](http://cdn.tycoding.cn/20200629094821.png)
+![](http://tycoding.cn/imgs/20200629094821.png)
 
-![](http://cdn.tycoding.cn/20200629094825.png)
+![](http://tycoding.cn/imgs/20200629094825.png)
 
 上面打印的值中，我们能看到，我们再`VueRouter`中创建的`path`匹配规则，实际在HTML中会被渲染为相关的**正则表达式**，来实现路径的匹配。
 其次，我们还能发现，在URL中拼接的参数`id`在`this.$route`对象的`query`属性中，我们通过`this.$route.query.id`即可获得传递的id值：`2`。
@@ -269,7 +269,7 @@ var routerObj = new VueRouter({
 
 如上，我们使用了`routes: []`中的另外一个属性：`children`，顾名思义就是表示这个父规则`/account`下存在一些子规则，且在URL中应该体现出来：
 
-![](http://cdn.tycoding.cn/20200629094831.png)
+![](http://tycoding.cn/imgs/20200629094831.png)
 
 **注意：**
 
@@ -317,9 +317,9 @@ routes: [
 
 **实例：**
 
-![](http://cdn.tycoding.cn/20200629094836.png)
+![](http://tycoding.cn/imgs/20200629094836.png)
 
-![](http://cdn.tycoding.cn/20200629094841.png)
+![](http://tycoding.cn/imgs/20200629094841.png)
 
 
 

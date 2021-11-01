@@ -234,13 +234,13 @@ public class ValidateCodeController {
 
 启动项目：
 
-![](http://cdn.tycoding.cn/20200629092250.png)
+![](http://tycoding.cn/imgs/20200629092250.png)
 
 至此，我们仅仅完成了图形验证码的绘制即展示，即使在Controller层将验证码对象储存在Session中，但是，并没有任何地方使用了这个Session。
 
 ## 验证码过滤器
 
-![](http://cdn.tycoding.cn/20200629092254.png)
+![](http://tycoding.cn/imgs/20200629092254.png)
 
 在之前学习的Spring Security过滤器链中，我们说`SecurityContextPersistenceFilter`是直接与请求交互的最前端的过滤器，`UsernamePasswordAuthenticationFilter`用于处理这个请求，而因为加了验证码校验，应该在`UsernamePasswordAuthenticationFilter`过滤器前面再判断如果验证码校验通过再校验用户名和密码，否者就直接抛出异常。
 
@@ -333,7 +333,7 @@ public class ValidateCodeException extends AuthenticationException {
 
 启动项目，在页面输入用户名密码、验证码登录，在`ValidateCodeFilter`过滤器处打断点：
 
-![](http://cdn.tycoding.cn/20200629092301.png)
+![](http://tycoding.cn/imgs/20200629092301.png)
 
 # SpringSecurity记住我
 
@@ -341,11 +341,11 @@ public class ValidateCodeException extends AuthenticationException {
 
 而在Spring Security中，Spring Security内部提供了对rememberMe数据的JDBC工具封装，也就是说如果需要记住我，那么Spring Security会将用户信息都持久化到数据库中。再次请求时会根据请求中携带的Cookie信息和数据库中储存的信息比对来判断当前用户是否已登录。
 
-![](http://cdn.tycoding.cn/20200629092307.png)
+![](http://tycoding.cn/imgs/20200629092307.png)
 
 并且，我们再回顾之前的Spring Security过滤器链：
 
-![](http://cdn.tycoding.cn/20200629092310.png)
+![](http://tycoding.cn/imgs/20200629092310.png)
 
 这个记住我相关的过滤器配置应该放在`UsernamePasswordAuthenticationFilter`过滤器的后面。当用户登录后，再次发送请求，此时并不是一个认证请求，Spring Security就不再执行`UsernamePasswordAuthenticationFilter`，而是直接调用`RememberMeAuthenticationFilter`过滤器，查询数据库中储存的Token，和浏览器携带的Cookie信息比对。
 
@@ -417,13 +417,13 @@ http
 
 可以看到数据库`springboot_security`中生成了一张表：
 
-![](http://cdn.tycoding.cn/20200629092315.png)
+![](http://tycoding.cn/imgs/20200629092315.png)
 
 > 2.关闭浏览器，重新打开并访问系统
 
 在`RememberMeAuthenticationFilter`中打断点：
 
-![](http://cdn.tycoding.cn/20200629092318.png)
+![](http://tycoding.cn/imgs/20200629092318.png)
 
 可以看到此时过滤器得到了RememberMe记住的数据，那么这次访问就不需要登录直接可进入系统了。
 

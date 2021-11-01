@@ -45,9 +45,9 @@ top: 29
 以上技术都是比较常用的，`webpack`类似一个打包工具，它会将你项目中的Vue组件打包为一个庞大的`js`文件（当然我们是看不懂的），而我们的前端项目是部署在`node.js`提供的web容器中的。
 
 即前后端分离的实际效果是这样的：
-![index.html](http://cdn.tycoding.cn/20200629094858.png)
+![index.html](http://tycoding.cn/imgs/20200629094858.png)
 
-![index](http://cdn.tycoding.cn/20200629094901.png)
+![index](http://tycoding.cn/imgs/20200629094901.png)
 
 有没有感觉很神奇，哈哈，反正我第一次见到的时候就是觉得很神奇，因为`html`中完全看不到任何js、css代码，但是却能渲染出来这么好看的页面。下面我们就讲一下，怎么实现这个过程吧！！
 
@@ -79,21 +79,21 @@ top: 29
 
 如果安装完成，我们可以看到出现如下目录结构：
 
-![](http://cdn.tycoding.cn/20200629094907.png)
+![](http://tycoding.cn/imgs/20200629094907.png)
 
 ### 启动项目
 
 在终端项目路径下输入`npm run dev`命令；正常情况下，会出现如下信息：
 
-![](http://cdn.tycoding.cn/20200629094911.png)
+![](http://tycoding.cn/imgs/20200629094911.png)
 
 在浏览器中输入指定的URL，会出现如下页面：
 
-![](http://cdn.tycoding.cn/20200629094914.png)
+![](http://tycoding.cn/imgs/20200629094914.png)
 
 我们继续观察，打开项目中的`index.html`
 
-![](http://cdn.tycoding.cn/20200629094920.png)
+![](http://tycoding.cn/imgs/20200629094920.png)
 
 我们看到，这个HTML中没有任何代码，甚至没有引入js、css，但是页面中的视图是怎样渲染出来的呢？
 
@@ -105,11 +105,11 @@ top: 29
 
 > npm run build
 
-![](http://cdn.tycoding.cn/20200629094924.png)
+![](http://tycoding.cn/imgs/20200629094924.png)
 
 正常情况下，会显示上图中的信息，表示打包成功了，会在项目根目录中生成一个叫`dist`的文件夹，里面是生成的静态项目：
 
-![](http://cdn.tycoding.cn/20200629094928.png)
+![](http://tycoding.cn/imgs/20200629094928.png)
 
 我们双击`dist/index.html`，会看到和之前一样的页面，但是其中引入了一个`XX.js`文件
 
@@ -141,13 +141,13 @@ new Vue({
 
 完整代码：
 
-![](http://cdn.tycoding.cn/20200629094934.png)
+![](http://tycoding.cn/imgs/20200629094934.png)
 
 
 ### 第二步：修改router/index.js
 这是有关Vue路由的配置，前面我们也已经讲过了vue的路由，这里不再多说，代码如下：
 
-![](http://cdn.tycoding.cn/20200629094938.png)
+![](http://tycoding.cn/imgs/20200629094938.png)
 
 如上就配置了，如果你访问`localhost:8081/`，那么就会自动路由跳转到`login.vue`组件中，提示我们登录;其中的`/home`表示，如果登录成功，就跳转到`home.vue`组件中，相当于登录成功后跳转到后台页面。
 
@@ -193,7 +193,7 @@ login组件中表单样式就不再讲了，我们主要看一下怎样利用`v-
 **提交表单**
 
 关于上面提到的element-ui的校验部分
-![](http://cdn.tycoding.cn/20200629094946.png)
+![](http://tycoding.cn/imgs/20200629094946.png)
 
 表单提交方法部分
 ```javascript
@@ -250,7 +250,7 @@ methods: {
 
 在`src/components/`下创建`home.vue`组件
 
-![](http://cdn.tycoding.cn/20200629094953.png)
+![](http://tycoding.cn/imgs/20200629094953.png)
 
 <br/>
 <br/>
@@ -282,7 +282,7 @@ methods: {
 
 讲了那么多，终于到了Controller层，这里就比较简单了，就是根据获取到的参数判断数据库中有没有对应的用户，有就登录成功，否者亏登录失败。
 
-![](http://cdn.tycoding.cn/20200629094958.png)
+![](http://tycoding.cn/imgs/20200629094958.png)
 
 由于我这里使用了shiro，需要将密码加密处理，所以没有直接传入到service层，当然思路是相同的。
 
@@ -294,11 +294,11 @@ methods: {
 
 **请求成功**
 
-![](http://cdn.tycoding.cn/20200629095005.png)
+![](http://tycoding.cn/imgs/20200629095005.png)
 
 跳转到home组件中：
 
-![](http://cdn.tycoding.cn/20200629095008.png)
+![](http://tycoding.cn/imgs/20200629095008.png)
 
 
 

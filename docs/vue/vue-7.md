@@ -54,11 +54,11 @@ Vue+ElementUI+SpringMVC实现图片上传和table回显
 
 *图片上传：*
 
-![](http://cdn.tycoding.cn/20200629095111.png)
+![](http://tycoding.cn/imgs/20200629095111.png)
 
 *table展示：*
 
-![](http://cdn.tycoding.cn/20200629095115.png)
+![](http://tycoding.cn/imgs/20200629095115.png)
 
 # 思路分析
 
@@ -382,11 +382,11 @@ new Vue({
 
 4、通过了`beforeUpload()`函数的校验，文件开始调用后端接口将数据发送给后端。文件的字段名：`picture`，格式：`multipart/form-data`，虽然我们的表单没有定义`enctype="multipart/form-data"`属性，但是HTTP请求头会自动设置为`multipart/form-data`类型。
 
-![](http://cdn.tycoding.cn/20200629095133.png)
+![](http://tycoding.cn/imgs/20200629095133.png)
 
 5、这时，如果后端逻辑没有错误，已经正常的将图片上传到服务器上了，可以在指定文件夹中查看到已上传的图片，那么此时JS中会自动调用`handleSuccess()`钩子函数，因为我们设置后端上传接口上传成功返回的数据是文件的保存路径：
 
-![](http://cdn.tycoding.cn/20200629095137.png)
+![](http://tycoding.cn/imgs/20200629095137.png)
 
 那我们就将这个路径通过Vue的双向绑定，赋值给表单对象的字段`picture`，那么提交表单的时候，该字段对应的值就是这个路径了。
 
@@ -402,11 +402,11 @@ new Vue({
 
 表单提交就比较简单了，就是触发对应的click事件，触发其中定义的函数，将已在`data(){}`中定义的表单数据发送给后端接口：
 
-![](http://cdn.tycoding.cn/20200629095203.png)
+![](http://tycoding.cn/imgs/20200629095203.png)
 
 提交数据：
 
-![](http://cdn.tycoding.cn/20200629095206.png)
+![](http://tycoding.cn/imgs/20200629095206.png)
 
 **后端接口**
 
@@ -427,7 +427,7 @@ public Result save(Instrument instrument) {
 
 数据库中保存的数据：
 
-![](http://cdn.tycoding.cn/20200629095212.png)
+![](http://tycoding.cn/imgs/20200629095212.png)
 
 
 

@@ -53,11 +53,11 @@ top: 59
 
 如上，前端完全依赖Vue.js，这和传统依赖Jquery的前端区别还是蛮大的，使用Vue即要用基于Node.js的前后端分离的开发模式，而本项目中仅仅是在HTML中引入了vue.js，虽然不是完全的前后端分离开发，但项目中我尽量使用Vue.js渲染数据，涉及后端的也仅是用到Thymeleaf的`th:replace`拼接页面。看下图：
 
-![](http://cdn.tycoding.cn/20200629093113.png)
+![](http://tycoding.cn/imgs/20200629093113.png)
 
 **截图**
 
-![](http://cdn.tycoding.cn/20200629093117.png)
+![](http://tycoding.cn/imgs/20200629093117.png)
 
 # 通用Mapper
 
@@ -229,7 +229,7 @@ public class GeneratorDisplay {
 
 修改`generatorConfig.xml`中`<table>`的名称，执行`GeneratorDisplay.java`就能生成不同的文件：
 
-![](http://cdn.tycoding.cn/20200629093126.png)
+![](http://tycoding.cn/imgs/20200629093126.png)
 
 
 ## 测试
@@ -248,7 +248,7 @@ insert into user values (1, 'tycoding', '123', '19');
 
 创建`UserMapper.java`的测试类`UserMapperTest.java`:
 
-![](http://cdn.tycoding.cn/20200629093134.png)
+![](http://tycoding.cn/imgs/20200629093134.png)
 
 可以看到，因为`UserMapper`继承了`MyMapper<User>`，而`MyMapper`又继承了`Mapper<T>, MySqlMapper<T>`。类似Jap中继承`JpaRepository`，`Mapper`接口中提供了很多API用于生成SQL，简化SQL编写。
 

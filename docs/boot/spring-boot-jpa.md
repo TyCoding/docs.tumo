@@ -137,11 +137,11 @@ public class Demo implements Serializable {
 
 如上已经完成了配置，下面直接启动项目的`main`方法，数据表`demo`会自动生成，
 
-![](http://cdn.tycoding.cn/20200629091443.png)
+![](http://tycoding.cn/imgs/20200629091443.png)
 
 发现莫名其妙的创建了一个表：`hibernate_sequence`
 
-![](http://cdn.tycoding.cn/20200629091446.png)
+![](http://tycoding.cn/imgs/20200629091446.png)
 
 避免自动创建`hibernate_sequence`表，修改之前的`Test.entity`主键自增策略:
 
@@ -155,7 +155,7 @@ private Long id;
 
 **But**，细心的你会发现，Entity中定义的字段顺序和JPA生成的表字段顺序不同，JPA生成的表中按照字段首字母排序：
 
-![](http://cdn.tycoding.cn/20200629091451.png)
+![](http://tycoding.cn/imgs/20200629091451.png)
 
 所以，坑，暂时没有解决，应该是Hibernate自身问题。
 
@@ -240,17 +240,17 @@ public interface UserDao extends JpaRepository<User, Long> {  }
 
 可能你会见到有的案例中`extends CrudRepository<T, ID>`等，其实都是可以的，翻看源码就知道，继承`JpaRepository`也可以使用`CrudRepository`的方法：
 
-![](http://cdn.tycoding.cn/20200629091457.png)
+![](http://tycoding.cn/imgs/20200629091457.png)
 
 **注意**`JpaRepository<T, ID>`，要指定泛型类型，否则Spring注入这个Bean的时候发现该Bean泛型类型不定而注入失败。
 
 下面我们看一下`JpaRepository`中提供的方法：
 
-![](http://cdn.tycoding.cn/20200629091500.png)
+![](http://tycoding.cn/imgs/20200629091500.png)
 
 `CrudRepository`:
 
-![](http://cdn.tycoding.cn/20200629091504.png)
+![](http://tycoding.cn/imgs/20200629091504.png)
 
 顾名思义，看了方法名应该就知道这个方法的具体作用了。
 
@@ -292,7 +292,7 @@ public void testFindAll() {
 
 `list.forEach(i -> {})`是JDK8新特性
 
-![](http://cdn.tycoding.cn/20200629091509.png)
+![](http://tycoding.cn/imgs/20200629091509.png)
 
 ## findById
 
@@ -307,7 +307,7 @@ public void testFindById() {
 }
 ```
 
-![](http://cdn.tycoding.cn/20200629091512.png)
+![](http://tycoding.cn/imgs/20200629091512.png)
 
 `findById`得到一个`Optional`对象，通过`.get()`可获取到其中封装的`User`对象。
 
@@ -315,11 +315,11 @@ public void testFindById() {
 
 还要一个方法：
 
-![](http://cdn.tycoding.cn/20200629091517.png)
+![](http://tycoding.cn/imgs/20200629091517.png)
 
 看似`getOne()`刚好返回一个`User`对象，但是查询`getOne()`方法的实现：
 
-![](http://cdn.tycoding.cn/20200629091521.png)
+![](http://tycoding.cn/imgs/20200629091521.png)
 
 可以看到这个方法其实返回一个`reference`代理对象，并不是真正的`User`对象，所以，如果你调用：
 
@@ -398,7 +398,7 @@ public void testDelete() {
 
 主要语法是：`findByXX`,`readByXX`,`queryByXX`,`countByXX`。`XX`代表属性名，如：
 
-![](http://cdn.tycoding.cn/20200629091529.png)
+![](http://tycoding.cn/imgs/20200629091529.png)
 
 ```java
 User findByUsername(String username);
@@ -406,7 +406,7 @@ User findByUsername(String username);
 
 或者加一些关键字：
 
-![](http://cdn.tycoding.cn/20200629091533.png)
+![](http://tycoding.cn/imgs/20200629091533.png)
 
 ```java
 User findByUsernameOrPassword(String username, String password);

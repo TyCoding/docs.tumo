@@ -80,7 +80,7 @@ public class UserController {
 
 启动项目，在浏览器上访问：`127.0.0.1:8080/test`接口： 
 
-![](http://cdn.tycoding.cn/20200629092351.png)
+![](http://tycoding.cn/imgs/20200629092351.png)
 
 > 可以看到，URL立即跳转到`/login`，并且，这个接口和页面并不是我们写的。
 
@@ -96,7 +96,7 @@ Using generated security password: 8b0e38a6-6af6-40cd-8882-a8c697fd803e
 
 这个就是Spring Security默认进行URL拦截并默认提供的登录密码，用户名是`user`。在登录页面上输入`user`和`8b0e38a6-6af6-40cd-8882-a8c697fd803e`，登录成功:
 
-![](http://cdn.tycoding.cn/20200629092359.png)
+![](http://tycoding.cn/imgs/20200629092359.png)
 
 ### 简单的配置
 
@@ -128,13 +128,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 最开始演示的是Spring Security默认的表单认证方式，当我们修改为`http.httpBasic()`后：
 
-![](http://cdn.tycoding.cn/20200629092403.png)
+![](http://tycoding.cn/imgs/20200629092403.png)
 
 ### 过滤器
 
 Spring Security基础的过滤器：
 
-![](http://cdn.tycoding.cn/20200629092407.png)
+![](http://tycoding.cn/imgs/20200629092407.png)
 
 当请求经过Spring Security，就会经过Spring Security的一系列过滤器，当都满足过滤器的条件，最终通过请求，响应请求。其中：
 
@@ -464,9 +464,9 @@ public class AuthenticationFailureHandlerImpl implements AuthenticationFailureHa
 
 启动项目，分别模拟登录成功和登录失败的情况。
 
-![](http://cdn.tycoding.cn/20200629092421.png)
+![](http://tycoding.cn/imgs/20200629092421.png)
 
-![](http://cdn.tycoding.cn/20200629092429.png)
+![](http://tycoding.cn/imgs/20200629092429.png)
 
 -----
 
@@ -474,33 +474,33 @@ public class AuthenticationFailureHandlerImpl implements AuthenticationFailureHa
 
 ### 身份校验流程
 
-![](http://cdn.tycoding.cn/20200629092432.png)
+![](http://tycoding.cn/imgs/20200629092432.png)
 
-![](http://cdn.tycoding.cn/20200629092438.png)
+![](http://tycoding.cn/imgs/20200629092438.png)
 
-![](http://cdn.tycoding.cn/20200629092446.png)
+![](http://tycoding.cn/imgs/20200629092446.png)
 
-![](http://cdn.tycoding.cn/20200629092459.png)
+![](http://tycoding.cn/imgs/20200629092459.png)
 
-![](http://cdn.tycoding.cn/20200629092506.png)
+![](http://tycoding.cn/imgs/20200629092506.png)
 
-![](http://cdn.tycoding.cn/20200629092510.png)
+![](http://tycoding.cn/imgs/20200629092510.png)
 
-![](http://cdn.tycoding.cn/20200629092514.png)
+![](http://tycoding.cn/imgs/20200629092514.png)
 
-![](http://cdn.tycoding.cn/20200629092518.png)
+![](http://tycoding.cn/imgs/20200629092518.png)
 
-![](http://cdn.tycoding.cn/20200629092522.png)
+![](http://tycoding.cn/imgs/20200629092522.png)
 
-![](http://cdn.tycoding.cn/20200629092527.png)
+![](http://tycoding.cn/imgs/20200629092527.png)
 
 ### 认证结果在多个请求中共享
 
 通常保证认证信息能在多个请求获取，会将认证信息储存在Session中。
 
-![](http://cdn.tycoding.cn/20200629092531.png)
+![](http://tycoding.cn/imgs/20200629092531.png)
 
-![](http://cdn.tycoding.cn/20200629092535.png)
+![](http://tycoding.cn/imgs/20200629092535.png)
 
 `SecurityContext`其实是`Authentication`的一个封装，而`SecurityContextHolder`是`ThreadLocal`的一个封装。
 
@@ -508,7 +508,7 @@ public class AuthenticationFailureHandlerImpl implements AuthenticationFailureHa
 
 那么最终是由`SecurityontextPersistenceFilter`使用`SecurityContextHolder`进行认证信息的读取。
 
-![](http://cdn.tycoding.cn/20200629092540.png)
+![](http://tycoding.cn/imgs/20200629092540.png)
 
 `SecurityontextPersistenceFilter`过滤器位于`UsernamePasswordAuthenticationFilter`过滤器前面，请求和响应都会经过这个过滤器。
 
@@ -535,7 +535,7 @@ public Object getCurrentUser(Authentication authentication) {
 }
 ```
 
-![](http://cdn.tycoding.cn/20200629092544.png)
+![](http://tycoding.cn/imgs/20200629092544.png)
 
 
 
